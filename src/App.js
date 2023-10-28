@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import MoviesList from "./components/MoviesList";
 import "./App.css";
 import { useCallback } from "react";
+import AddForm from "./components/AddForm";
 
 function App() {
   const [movie, setMovie] = useState([]);
@@ -49,6 +50,9 @@ function App() {
 
   return (
     <React.Fragment>
+      <section>
+        <AddForm/>
+      </section>
       <section>
         <button onClick={dataHandler}>Fetch Movies</button>
       </section>
